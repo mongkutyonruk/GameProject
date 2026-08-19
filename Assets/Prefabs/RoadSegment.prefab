@@ -576,7 +576,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c9aca997947e044f8ef35a9d1ad229f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GenerateRoad
-  roadSegment: {fileID: 3049797450609044054}
+  roadSegments:
+  - {fileID: 3049797450609044054}
 --- !u!1 &1672417989767064483
 GameObject:
   m_ObjectHideFlags: 0
