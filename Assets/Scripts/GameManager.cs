@@ -6,6 +6,8 @@ public class GameManager : MonoBehaviour
 
     public float roadSpeed = 2f;
 
+    public GameObject[] roadSegments;
+
     private void Awake()
     {
         if (Instance == null)

@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class GenerateRoad : MonoBehaviour
 {
-    public GameObject[] roadSegments;
     private RoadSegment road;
 
     private void Awake()
@@ -14,10 +13,10 @@ public class GenerateRoad : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            if (road != null && roadSegments.Length > 0)
+            if (road != null && GameManager.Instance.roadSegments.Length > 0)
             {
-                int random = Random.Range(0, roadSegments.Length);
-                Instantiate(roadSegments[random], road.spawnPoint.position, road.spawnPoint.rotation);
+                int random = Random.Range(0, GameManager.Instance.roadSegments.Length);
+                Instantiate(GameManager.Instance.roadSegments[random], road.spawnPoint.position, road.spawnPoint.rotation);
             }
         }
     }
