@@ -7,6 +7,7 @@ public class ObstacleHandler : MonoBehaviour
         if (other.CompareTag("Obstacle"))
         {
             Debug.Log("PLAYER HIT OBSTACLE!");
+            GameManager.Instance.ChangeState(GameManager.Instance.GameOverState);
         }
     }
 }

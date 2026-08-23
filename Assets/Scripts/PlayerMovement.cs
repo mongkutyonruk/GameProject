@@ -11,6 +11,11 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        if (!GameManager.Instance.CurrentState.CanMovePlayer)
+        {
+            return;
+        }
+
         float horizontal = Input.GetAxis("Horizontal");
 
         transform.position += new Vector3(1, 0, 0) * horizontal * moveSpeed * Time.deltaTime;
