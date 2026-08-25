@@ -100,7 +100,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1727490741352877927}
   - component: {fileID: 2984459991514479139}
-  - component: {fileID: 1552625539787201298}
   - component: {fileID: 3951787822602793485}
   m_Layer: 0
   m_Name: Obstacle
@@ -156,21 +155,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1552625539787201298
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4979712653479278365}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e7ad1cfd361fb34dac40de4dbaec9ae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  moveSpeed: 5
-  leftLimit: -4.5
-  rightLimit: 4.5
 --- !u!65 &3951787822602793485
 BoxCollider:
   m_ObjectHideFlags: 0
