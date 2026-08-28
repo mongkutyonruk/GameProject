@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 
     public float normalRoadSpeed = 12f;
     public float boostedRoadSpeed = 20f;
+    public float boostDuration = 5f;
 
     public GameObject[] roadSegments;
 
@@ -21,9 +22,23 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public bool IsPaused { get; private set; }
+
+    public bool CanPlayerMove
+    {
+        get
+        {
+            if (IsPaused)
+            {
+                return false;
+            }
+
+            return CurrentState.CanMovePlayer;
+        }
+    }
+
     public DrivingState DrivingState { get; private set; }
     public BoostedState BoostedState { get; private set; }
-    public PausedState PausedState { get; private set; }
     public GameOverState GameOverState { get; private set; }
 
     private void Awake()
@@ -40,7 +55,6 @@ public class GameManager : MonoBehaviour
 
         DrivingState = new DrivingState(this);
         BoostedState = new BoostedState(this);
-        PausedState = new PausedState(this);
         GameOverState = new GameOverState(this);
     }
 
@@ -51,14 +65,14 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        currentState?.Update();
-
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (currentState == PausedState)
-                ChangeState(DrivingState);
-            else
-                ChangeState(PausedState);
+            TogglePause();
+        }
+
+        if (!IsPaused && currentState != null)
+        {
+            currentState.Update();
         }
     }
 
@@ -74,5 +88,34 @@ public class GameManager : MonoBehaviour
         currentState.Enter();
 
         Debug.Log("State changed to: " + currentState.GetType().Name);
+    }
+
+    private void TogglePause()
+    {
+        if (currentState == GameOverState)
+        {
+            return;
+        }
+
+        IsPaused = !IsPaused;
+
+        if (IsPaused)
+        {
+            RoadSpeed = 0f;
+            Debug.Log("Game Paused");
+        }
+        else
+        {
+            Debug.Log("Game Resumed");
+
+            if (currentState == DrivingState)
+            {
+                RoadSpeed = normalRoadSpeed;
+            }
+            else if (currentState == BoostedState)
+            {
+                RoadSpeed = boostedRoadSpeed;
+            }
+        }
     }
 }
