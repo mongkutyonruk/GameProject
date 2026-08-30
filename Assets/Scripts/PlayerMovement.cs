@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        if (!GameManager.Instance.CurrentState.CanMovePlayer)
+        if (!GameManager.Instance.CanPlayerMove)
         {
             return;
         }

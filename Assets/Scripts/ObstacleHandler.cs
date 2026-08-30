@@ -6,6 +6,11 @@ public class ObstacleHandler : MonoBehaviour
     {
         if (other.CompareTag("Obstacle"))
         {
+            if (GameManager.Instance.CurrentState.IsInvincible)
+            {
+                return;
+            }
+
             Debug.Log("PLAYER HIT OBSTACLE!");
             GameManager.Instance.ChangeState(GameManager.Instance.GameOverState);
         }
