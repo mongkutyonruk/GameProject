@@ -11,5 +11,6 @@ public class GameOverState : BaseState
         Debug.Log("Game Over");
         gameManager.RoadSpeed = 0f;
         CanMovePlayer = false;
+        IsInvincible = false;
     }
 }

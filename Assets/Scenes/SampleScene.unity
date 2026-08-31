@@ -119,6 +119,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+<<<<<<< HEAD
 --- !u!1 &71215959
 GameObject:
   m_ObjectHideFlags: 0
@@ -467,6 +468,8 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 251673425}
   m_CullTransparentMesh: 1
+=======
+>>>>>>> main
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -973,6 +976,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!1 &999943854
 GameObject:
   m_ObjectHideFlags: 0
@@ -1302,6 +1306,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   pauseMenu: {fileID: 1318527234}
+=======
+>>>>>>> main
 --- !u!1 &1414780553
 GameObject:
   m_ObjectHideFlags: 0
@@ -1333,8 +1339,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   normalRoadSpeed: 12
   boostedRoadSpeed: 20
+  boostDuration: 5
   roadSegments:
+<<<<<<< HEAD
   - {fileID: 3314805142632311171, guid: 23702728c279fdf40b2aab99d827e84a, type: 3}
+=======
+  - {fileID: 1295918034204083859, guid: 652bffb127f58364a81eeb9507ffd861, type: 3}
+>>>>>>> main
 --- !u!4 &1414780555
 Transform:
   m_ObjectHideFlags: 0
@@ -1409,8 +1420,15 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6174536338914281529, guid: bd141d334f54a49409c60a603bb99188, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1885961927}
+    - targetCorrespondingSourceObject: {fileID: 6174536338914281529, guid: bd141d334f54a49409c60a603bb99188, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1885961928}
   m_SourcePrefab: {fileID: 100100000, guid: bd141d334f54a49409c60a603bb99188, type: 3}
+<<<<<<< HEAD
 --- !u!1 &1585912210
 GameObject:
   m_ObjectHideFlags: 0
@@ -1451,11 +1469,20 @@ RectTransform:
   m_SizeDelta: {x: 1052.3896, y: 200.3671}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1585912212
+=======
+--- !u!1 &1885961926 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6174536338914281529, guid: bd141d334f54a49409c60a603bb99188, type: 3}
+  m_PrefabInstance: {fileID: 1510242293}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1885961927
+>>>>>>> main
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1585912210}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -1513,11 +1540,21 @@ RectTransform:
   m_SizeDelta: {x: 165, y: 165}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1886428902
+=======
+  m_GameObject: {fileID: 1885961926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4c2336b14aa2fc4aadfe5022eeb4c39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BoostHandler
+--- !u!114 &1885961928
+>>>>>>> main
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1886428900}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -1606,6 +1643,14 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1886428900}
   m_CullTransparentMesh: 1
+=======
+  m_GameObject: {fileID: 1885961926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75dd193c94026404ea5d0f252a44f7e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+>>>>>>> main
 --- !u!1 &1911031763
 GameObject:
   m_ObjectHideFlags: 0
@@ -1886,5 +1931,8 @@ SceneRoots:
   - {fileID: 712009208}
   - {fileID: 1510242293}
   - {fileID: 1911031766}
+<<<<<<< HEAD
   - {fileID: 79423554}
   - {fileID: 1284419500}
+=======
+>>>>>>> main
