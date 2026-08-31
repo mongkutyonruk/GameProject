@@ -1,14 +1,14 @@
 using UnityEngine;
 
-public class GameOverState : BaseState
+public class PausedState : BaseState
 {
-    public GameOverState(GameManager gameManager) : base(gameManager)
+    public PausedState(GameManager gameManager) : base(gameManager)
     {
     }
 
     public override void Enter()
     {
-        Debug.Log("Game Over");
+        Debug.Log("Game Paused");
         gameManager.RoadSpeed = 0f;
         CanMovePlayer = false;
     }
