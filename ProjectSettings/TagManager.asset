@@ -7,8 +7,6 @@ TagManager:
   - Trigger
   - Destroy
   - Obstacle
-  - Boost
-  - Present
   layers:
   - Default
   - TransparentFX
