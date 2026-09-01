@@ -41,6 +41,8 @@ public class GameManager : MonoBehaviour
     public BoostedState BoostedState { get; private set; }
     public GameOverState GameOverState { get; private set; }
 
+    public event System.Action<bool> PausedState;
+
     private void Awake()
     {
         if (Instance == null)
@@ -67,7 +69,14 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            TogglePause();
+            if (IsPaused)
+            {
+                ResumeGame();
+            }
+            else
+            {
+                PauseGame();
+            }
         }
 
         if (!IsPaused && currentState != null)
@@ -90,32 +99,26 @@ public class GameManager : MonoBehaviour
         Debug.Log("State changed to: " + currentState.GetType().Name);
     }
 
-    private void TogglePause()
+    public void PauseGame()
     {
         if (currentState == GameOverState)
         {
             return;
         }
 
-        IsPaused = !IsPaused;
+        IsPaused = true;
+        Time.timeScale = 0f;
+        PausedState?.Invoke(true);
 
-        if (IsPaused)
-        {
-            RoadSpeed = 0f;
-            Debug.Log("Game Paused");
-        }
-        else
-        {
-            Debug.Log("Game Resumed");
+        Debug.Log("Game Paused");
+    }
 
-            if (currentState == DrivingState)
-            {
-                RoadSpeed = normalRoadSpeed;
-            }
-            else if (currentState == BoostedState)
-            {
-                RoadSpeed = boostedRoadSpeed;
-            }
-        }
+    public void ResumeGame()
+    {
+        IsPaused = false;
+        Time.timeScale = 1f;
+        PausedState?.Invoke(false);
+
+        Debug.Log("Game Resumed");
     }
 }
