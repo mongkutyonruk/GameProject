@@ -6,6 +6,7 @@ public class GameOverMenu : MonoBehaviour
 {
     [SerializeField] private GameObject gameOverPanel;
     [SerializeField] private TMP_Text finalDistanceText;
+    [SerializeField] private TMP_Text finalTokenCount;
 
     private void Start()
     {
@@ -30,6 +31,7 @@ public class GameOverMenu : MonoBehaviour
         if (isGameOver)
         {
             finalDistanceText.text = Mathf.FloorToInt(GameHUD.Instance.Distance).ToString();
+            finalTokenCount.text = GameHUD.Instance.TokenCount.ToString();
         }
     }
 
