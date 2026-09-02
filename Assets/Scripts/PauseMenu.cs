@@ -9,7 +9,7 @@ public class PauseMenu : MonoBehaviour
     {
         if(GameManager.Instance != null)
         {
-            GameManager.Instance.PausedState += HandlePausedStateChange;
+            GameManager.Instance.PausedStateChanged += HandlePausedStateChange;
         }
     }
 
@@ -17,7 +17,7 @@ public class PauseMenu : MonoBehaviour
     {
         if (GameManager.Instance != null)
         {
-            GameManager.Instance.PausedState -= HandlePausedStateChange;
+            GameManager.Instance.PausedStateChanged -= HandlePausedStateChange;
         }
     }
 

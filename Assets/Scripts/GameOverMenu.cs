@@ -1,16 +1,40 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameOverMenu : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [SerializeField] private GameObject gameOverPanel;
+
+    private void Start()
     {
-        
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.GameOverStateChanged += HandleGameOverStateChange;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnDestroy()
     {
-        
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.GameOverStateChanged -= HandleGameOverStateChange;
+        }
+    }
+
+    private void HandleGameOverStateChange(bool isGameOver)
+    {
+        gameOverPanel.SetActive(isGameOver);
+    }
+
+    public void Restart()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void Quit()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("MainMenu");
     }
 }

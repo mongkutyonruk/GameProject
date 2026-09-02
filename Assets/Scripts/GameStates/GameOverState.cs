@@ -9,8 +9,9 @@ public class GameOverState : BaseState
     public override void Enter()
     {
         Debug.Log("Game Over");
-        gameManager.RoadSpeed = 0f;
+        //gameManager.RoadSpeed = 0f;
         CanMovePlayer = false;
         IsInvincible = false;
+        Time.timeScale = 0f;
     }
 }

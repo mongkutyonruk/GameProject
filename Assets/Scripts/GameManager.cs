@@ -1,3 +1,4 @@
+using System.Threading;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -41,7 +42,8 @@ public class GameManager : MonoBehaviour
     public BoostedState BoostedState { get; private set; }
     public GameOverState GameOverState { get; private set; }
 
-    public event System.Action<bool> PausedState;
+    public event System.Action<bool> PausedStateChanged;
+    public event System.Action<bool> GameOverStateChanged;
 
     private void Awake()
     {
@@ -96,6 +98,11 @@ public class GameManager : MonoBehaviour
 
         currentState.Enter();
 
+        if (currentState == GameOverState)
+        {
+            GameOverStateChanged?.Invoke(true);
+        }
+
         Debug.Log("State changed to: " + currentState.GetType().Name);
     }
 
@@ -108,7 +115,7 @@ public class GameManager : MonoBehaviour
 
         IsPaused = true;
         Time.timeScale = 0f;
-        PausedState?.Invoke(true);
+        PausedStateChanged?.Invoke(true);
 
         Debug.Log("Game Paused");
     }
@@ -117,7 +124,7 @@ public class GameManager : MonoBehaviour
     {
         IsPaused = false;
         Time.timeScale = 1f;
-        PausedState?.Invoke(false);
+        PausedStateChanged?.Invoke(false);
 
         Debug.Log("Game Resumed");
     }
