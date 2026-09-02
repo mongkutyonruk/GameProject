@@ -9,8 +9,10 @@ public class TokenHandler : MonoBehaviour
         if (other.CompareTag("Present"))
         {
             tokenCount++;
+            GameHUD.Instance.UpdateTokenCount(tokenCount);
+            Destroy(other.gameObject);
+
             Debug.Log("Tokens collected: " + tokenCount);
         }
-        Destroy(other.gameObject);
     }
 }

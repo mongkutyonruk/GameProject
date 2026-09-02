@@ -1,9 +1,11 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class GameOverMenu : MonoBehaviour
 {
     [SerializeField] private GameObject gameOverPanel;
+    [SerializeField] private TMP_Text finalDistanceText;
 
     private void Start()
     {
@@ -24,6 +26,11 @@ public class GameOverMenu : MonoBehaviour
     private void HandleGameOverStateChange(bool isGameOver)
     {
         gameOverPanel.SetActive(isGameOver);
+
+        if (isGameOver)
+        {
+            finalDistanceText.text = Mathf.FloorToInt(GameHUD.Instance.Distance).ToString();
+        }
     }
 
     public void Restart()
