@@ -13,6 +13,10 @@ public class GameManager : MonoBehaviour
 
     public GameObject[] roadSegments;
 
+    public bool tutorialRoadsEnabled = true;
+    public GameObject[] tutorialRoadSegments;
+    public bool IsTutorialActive { get; private set; }
+
     private BaseState currentState;
 
     public BaseState CurrentState
@@ -64,6 +68,8 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        IsTutorialActive = tutorialRoadsEnabled;
+
         ChangeState(DrivingState);
     }
 
@@ -127,5 +133,12 @@ public class GameManager : MonoBehaviour
         PausedStateChanged?.Invoke(false);
 
         Debug.Log("Game Resumed");
+    }
+
+    public void EndTutorial()
+    {
+        IsTutorialActive = false;
+
+        Debug.Log("Tutorial ended");
     }
 }

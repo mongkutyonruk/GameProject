@@ -2223,7 +2223,11 @@ MonoBehaviour:
   boostedRoadSpeed: 20
   boostDuration: 5
   roadSegments:
+  - {fileID: 3314805142632311171, guid: 23702728c279fdf40b2aab99d827e84a, type: 3}
   - {fileID: 1435044523425984424, guid: 5e05b33e6f9b42046b91caae609b8f36, type: 3}
+  tutorialRoadsEnabled: 1
+  tutorialRoadSegments:
+  - {fileID: 863620721192409175, guid: 770ff18114dc7884e851a5603b5036d5, type: 3}
 --- !u!4 &1414780555
 Transform:
   m_ObjectHideFlags: 0
