@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     public bool tutorialRoadsEnabled = true;
     public GameObject[] tutorialRoadSegments;
     public bool IsTutorialActive { get; private set; }
+    private int tutorialRoadIndex = 0;
 
     private BaseState currentState;
 
@@ -135,10 +136,41 @@ public class GameManager : MonoBehaviour
         Debug.Log("Game Resumed");
     }
 
+    public GameObject GetNextTutorialRoad()
+    {
+        if (tutorialRoadIndex >= tutorialRoadSegments.Length)
+        {
+            return null;
+        }
+
+        GameObject road = tutorialRoadSegments[tutorialRoadIndex];
+
+        tutorialRoadIndex++;
+
+        return road;
+    }
+
     public void EndTutorial()
     {
         IsTutorialActive = false;
 
         Debug.Log("Tutorial ended");
+    }
+
+    public void FreezeRoad()
+    {
+        RoadSpeed = 0f;
+    }
+
+    public void ResumeRoad()
+    {
+        if (CurrentState == BoostedState)
+        {
+            RoadSpeed = boostedRoadSpeed;
+        }
+        else if (CurrentState == DrivingState)
+        {
+            RoadSpeed = normalRoadSpeed;
+        }
     }
 }

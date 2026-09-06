@@ -21,22 +21,26 @@ public class GenerateRoad : MonoBehaviour
             return;
         }
 
-        GameObject[] roadPool;
+        GameObject nextRoad = null;
 
         if (GameManager.Instance.IsTutorialActive)
         {
-            roadPool = GameManager.Instance.tutorialRoadSegments;
+            nextRoad = GameManager.Instance.GetNextTutorialRoad();
         }
         else
         {
-            roadPool = GameManager.Instance.roadSegments;
+            GameObject[] roadPool = GameManager.Instance.roadSegments;
+
+            if (roadPool.Length > 0)
+            {
+                int random = Random.Range(0, roadPool.Length);
+                nextRoad = roadPool[random];
+            }
         }
 
-        if (roadPool.Length > 0)
+        if (nextRoad != null)
         {
-            int random = Random.Range(0, roadPool.Length);
-
-            Instantiate(roadPool[random], road.spawnPoint.position, road.spawnPoint.rotation);
+            Instantiate(nextRoad, road.spawnPoint.position, road.spawnPoint.rotation);
         }
     }
 }
