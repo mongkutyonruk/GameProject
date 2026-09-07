@@ -8,6 +8,7 @@ public class BoostHandler : MonoBehaviour
         {
             Debug.Log("Player collected a boost token!");
             GameManager.Instance.ChangeState(GameManager.Instance.BoostedState);
+            Destroy(other.gameObject);
         }
     }
 }
