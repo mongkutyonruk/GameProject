@@ -12,6 +12,12 @@ public class GameHUD : MonoBehaviour
     private float distance = 0f;
     private int tokenCount = 0;
 
+    private bool scoreStarted = false;
+    public bool ScoreStarted
+    {
+        get { return scoreStarted; }
+    }
+
     public float Distance
     {
         get { return distance; }
@@ -22,19 +28,42 @@ public class GameHUD : MonoBehaviour
         get { return tokenCount; }
     }
 
+    private void Start()
+    {
+        if (!GameManager.Instance.tutorialRoadsEnabled)
+        {
+            StartScore();
+        }
+    }
+
     private void Awake()
     {
         Instance = this;
     }
 
+    public void StartScore()
+    {
+        scoreStarted = true;
+    }
+
     private void Update()
     {
+        if (!scoreStarted)
+        {
+            return;
+        }
+
         distance += GameManager.Instance.RoadSpeed * Time.deltaTime * distanceMult;
         distanceText.text = Mathf.FloorToInt(distance).ToString();
     }
 
     public void UpdateTokenCount(int tokenCount)
     {
+        if (!scoreStarted)
+        {
+            return;
+        }
+
         this.tokenCount = tokenCount;
         tokenText.text = tokenCount.ToString();
     }

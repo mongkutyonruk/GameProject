@@ -11,13 +11,36 @@ public class GenerateRoad : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (!other.CompareTag("Player"))
         {
-            if (road != null && GameManager.Instance.roadSegments.Length > 0)
+            return;
+        }
+
+        if (road == null)
+        {
+            return;
+        }
+
+        GameObject nextRoad = null;
+
+        if (GameManager.Instance.IsTutorialActive)
+        {
+            nextRoad = GameManager.Instance.GetNextTutorialRoad();
+        }
+        else
+        {
+            GameObject[] roadPool = GameManager.Instance.roadSegments;
+
+            if (roadPool.Length > 0)
             {
-                int random = Random.Range(0, GameManager.Instance.roadSegments.Length);
-                Instantiate(GameManager.Instance.roadSegments[random], road.spawnPoint.position, road.spawnPoint.rotation);
+                int random = Random.Range(0, roadPool.Length);
+                nextRoad = roadPool[random];
             }
+        }
+
+        if (nextRoad != null)
+        {
+            Instantiate(nextRoad, road.spawnPoint.position, road.spawnPoint.rotation);
         }
     }
 }
