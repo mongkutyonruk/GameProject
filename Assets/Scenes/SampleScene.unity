@@ -1578,47 +1578,47 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8525222244289133394, guid: 2765bebb9e7f38f449e0f9ba8056666a, type: 3}
+    - target: {fileID: 2085890847094468606, guid: 1e29cf3a304afe841a04c48ec424cd66, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8525222244289133394, guid: 2765bebb9e7f38f449e0f9ba8056666a, type: 3}
+    - target: {fileID: 2085890847094468606, guid: 1e29cf3a304afe841a04c48ec424cd66, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8525222244289133394, guid: 2765bebb9e7f38f449e0f9ba8056666a, type: 3}
+    - target: {fileID: 2085890847094468606, guid: 1e29cf3a304afe841a04c48ec424cd66, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8525222244289133394, guid: 2765bebb9e7f38f449e0f9ba8056666a, type: 3}
+    - target: {fileID: 2085890847094468606, guid: 1e29cf3a304afe841a04c48ec424cd66, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8525222244289133394, guid: 2765bebb9e7f38f449e0f9ba8056666a, type: 3}
+    - target: {fileID: 2085890847094468606, guid: 1e29cf3a304afe841a04c48ec424cd66, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8525222244289133394, guid: 2765bebb9e7f38f449e0f9ba8056666a, type: 3}
+    - target: {fileID: 2085890847094468606, guid: 1e29cf3a304afe841a04c48ec424cd66, type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8525222244289133394, guid: 2765bebb9e7f38f449e0f9ba8056666a, type: 3}
+    - target: {fileID: 2085890847094468606, guid: 1e29cf3a304afe841a04c48ec424cd66, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8525222244289133394, guid: 2765bebb9e7f38f449e0f9ba8056666a, type: 3}
+    - target: {fileID: 2085890847094468606, guid: 1e29cf3a304afe841a04c48ec424cd66, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8525222244289133394, guid: 2765bebb9e7f38f449e0f9ba8056666a, type: 3}
+    - target: {fileID: 2085890847094468606, guid: 1e29cf3a304afe841a04c48ec424cd66, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8525222244289133394, guid: 2765bebb9e7f38f449e0f9ba8056666a, type: 3}
+    - target: {fileID: 2085890847094468606, guid: 1e29cf3a304afe841a04c48ec424cd66, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 862252400243939654, guid: 2765bebb9e7f38f449e0f9ba8056666a, type: 3}
+    - target: {fileID: 3049797450609044054, guid: 1e29cf3a304afe841a04c48ec424cd66, type: 3}
       propertyPath: m_Name
       value: RoadSegment
       objectReference: {fileID: 0}
@@ -1626,7 +1626,7 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 2765bebb9e7f38f449e0f9ba8056666a, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 1e29cf3a304afe841a04c48ec424cd66, type: 3}
 --- !u!1 &713934369
 GameObject:
   m_ObjectHideFlags: 0
@@ -2357,12 +2357,12 @@ MonoBehaviour:
   boostedRoadSpeed: 20
   boostDuration: 5
   roadSegments:
-  - {fileID: 862252400243939654, guid: 2765bebb9e7f38f449e0f9ba8056666a, type: 3}
+  - {fileID: 3314805142632311171, guid: 23702728c279fdf40b2aab99d827e84a, type: 3}
   tutorialRoadsEnabled: 1
   tutorialRoadSegments:
-  - {fileID: 7123182944707312332, guid: 3c9d3248cc3c20448bb121ebd15b3f0d, type: 3}
-  - {fileID: 8007345643096460799, guid: b120c6900a788994eadc403008a76c63, type: 3}
-  - {fileID: 1062407457320132910, guid: cbe0d017ad8c64f49a75b8e21140642d, type: 3}
+  - {fileID: 863620721192409175, guid: 770ff18114dc7884e851a5603b5036d5, type: 3}
+  - {fileID: 1899573856591956155, guid: 64536bd893f3f3146a1df4a8645d001f, type: 3}
+  - {fileID: 7470859884116899422, guid: d48154036bb1a0f4c995a5135f3ccde0, type: 3}
 --- !u!4 &1414780555
 Transform:
   m_ObjectHideFlags: 0
