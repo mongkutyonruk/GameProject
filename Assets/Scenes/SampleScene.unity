@@ -2369,6 +2369,10 @@ MonoBehaviour:
   - {fileID: 5619830555467849587, guid: cab9b87e344c2ec4ab4d0638ba7bcd4c, type: 3}
   - {fileID: 6999097689515549768, guid: 12f0de9550914d3458c1bfb8670b0959, type: 3}
   - {fileID: 511939254259467927, guid: 322fb14066cca204489a819303fc6cf7, type: 3}
+  - {fileID: 2216342211656671133, guid: b0644c6a047caca4cb270ad9a814d569, type: 3}
+  - {fileID: 9190926561527835150, guid: 417292afec01a0a41b2a11ca1cb285cb, type: 3}
+  - {fileID: 5743682033405741744, guid: 557e1e390d84de6439288479ef755ab5, type: 3}
+  - {fileID: 7023958108667785978, guid: 83347d87146dec449810a8a745609930, type: 3}
   tutorialRoadsEnabled: 1
   tutorialRoadSegments:
   - {fileID: 863620721192409175, guid: 770ff18114dc7884e851a5603b5036d5, type: 3}
@@ -3922,10 +3926,6 @@ PrefabInstance:
     - target: {fileID: 4865872814242562000, guid: 3853bf692f655b34c9f88d60db1819d9, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 4865872814242562000, guid: 3853bf692f655b34c9f88d60db1819d9, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

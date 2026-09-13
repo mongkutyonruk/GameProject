@@ -1,11 +1,13 @@
 using UnityEngine;
+using TMPro;
 
 public class BoostedState : BaseState
 {
     private float boostTimer;
+    private TMP_Text boostTimerText;
 
     private Renderer[] playerRenderers;
-    private Color[] originalColors;
+    private MaterialPropertyBlock colorBlock;
 
     public BoostedState(GameManager gameManager) : base(gameManager)
     {
@@ -21,18 +23,30 @@ public class BoostedState : BaseState
 
         boostTimer = gameManager.boostDuration;
 
-        //remove later only for debug (changes car color when boosting)
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         if (player != null)
         {
+            // find the TextMeshPro text somewhere under the player
+            boostTimerText = player.GetComponentInChildren<TMP_Text>(true);
+
+            if (boostTimerText != null)
+            {
+                boostTimerText.gameObject.SetActive(true);
+                boostTimerText.text = boostTimer.ToString("F1");
+            }
+
+            // find every renderer belonging to the player
             playerRenderers = player.GetComponentsInChildren<Renderer>();
 
-            originalColors = new Color[playerRenderers.Length];
+            colorBlock = new MaterialPropertyBlock();
 
-            for (int i = 0; i < playerRenderers.Length; i++)
+            foreach (Renderer renderer in playerRenderers)
             {
-                originalColors[i] = playerRenderers[i].material.color;
-                playerRenderers[i].material.color = Color.green;
+                renderer.GetPropertyBlock(colorBlock);
+
+                colorBlock.SetColor("_BaseColor", Color.yellow);
+
+                renderer.SetPropertyBlock(colorBlock);
             }
         }
     }
@@ -40,6 +54,11 @@ public class BoostedState : BaseState
     public override void Update()
     {
         boostTimer -= Time.deltaTime;
+
+        if (boostTimerText != null)
+        {
+            boostTimerText.text = Mathf.Max(0f, boostTimer).ToString("F1");
+        }
 
         if (boostTimer <= 0f)
         {
@@ -51,11 +70,16 @@ public class BoostedState : BaseState
     {
         IsInvincible = false;
 
+        if (boostTimerText != null)
+        {
+            boostTimerText.gameObject.SetActive(false);
+        }
+
         if (playerRenderers != null)
         {
-            for (int i = 0; i < playerRenderers.Length; i++)
+            foreach (Renderer renderer in playerRenderers)
             {
-                playerRenderers[i].material.color = originalColors[i];
+                renderer.SetPropertyBlock(null);
             }
         }
 
