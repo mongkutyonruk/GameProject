@@ -2357,7 +2357,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdbbc9e396716a34bb3c34da18ebbd97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
-  normalRoadSpeed: 12
+  normalRoadSpeed: 15
   boostedRoadSpeed: 20
   boostDuration: 5
   roadSegments:
