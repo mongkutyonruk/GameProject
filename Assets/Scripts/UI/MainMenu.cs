@@ -13,7 +13,7 @@ public class MainMenu : MonoBehaviour
         }
 
         // loads the scene containing the main gameplay
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene(1);
     }
 
     // closes the application when the player chooses to quit
