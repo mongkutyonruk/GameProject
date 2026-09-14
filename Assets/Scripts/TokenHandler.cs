@@ -27,6 +27,12 @@ public class TokenHandler : MonoBehaviour
         // updates the token count displayed on the game hud
         GameHUD.Instance.UpdateTokenCount(tokenCount);
 
+        // plays the present collection sound
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlayPresent();
+        }
+
         // removes the collected present from the scene
         Destroy(other.gameObject);
 

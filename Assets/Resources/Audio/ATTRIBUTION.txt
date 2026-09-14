@@ -1,0 +1,17 @@
+Sounds used in the game (all CC0 / public domain)
+
+bgm_menu.mp3
+  Emma_MA — Wintery loop
+  https://opengameart.org/content/wintery-loop
+
+bgm_gameplay.ogg
+  3xBlast — Happy synths loop with slight christmas feeling
+  https://opengameart.org/content/happy-synths-loop-with-slight-christmas-feeling
+
+present.wav
+  Spring Spring — Pleasing Bell Sound Effect
+  https://opengameart.org/content/pleasing-bell-sound-effect
+
+boost.ogg, boost_end.ogg, crash.ogg, click.ogg, pause.ogg, resume.ogg
+  Kenney.nl — Interface Sounds
+  https://kenney.nl/assets/interface-sounds

@@ -1,0 +1,60 @@
+Audio for GameProject
+=====================
+The chosen clips are copied into Assets/Resources/Audio and used by
+AudioManager. This Preview folder is just the extras I listened to.
+
+How to listen
+-------------
+1. Open this project in Unity (6000.3.22f1).
+2. Select a file under Assets/Audio/Preview.
+3. Press the play button at the bottom of the Inspector.
+
+Suggested pairing (one from each folder)
+----------------------------------------
+Menu music     BGM/bgm_menu__wintery_loop.mp3
+Gameplay music BGM/bgm_gameplay__christmas_synths.ogg
+               (or BGM/bgm_alt__every_xmas_merry_xmas.ogg)
+Present pickup SFX_Present/present_a__pleasing_bell.wav
+Boost pickup   SFX_Boost/boost_a__confirmation.ogg
+Boost end      SFX_Boost/boost_end_a__whoosh_down.ogg
+Crash          SFX_Crash/crash_a__error.ogg
+               (or crash_d__metal_hit.ogg if you want a physical hit)
+UI click       SFX_UI/click_a__click.ogg
+Pause / resume SFX_UI/pause__minimize.ogg
+               SFX_UI/resume__maximize.ogg
+
+Sources (all CC0 / public domain — commercial use OK, credit optional)
+----------------------------------------------------------------------
+BGM/bgm_menu__wintery_loop.mp3
+  Emma_MA — "Wintery loop"
+  https://opengameart.org/content/wintery-loop
+
+BGM/bgm_gameplay__christmas_synths.ogg
+  3xBlast — "Happy synths loop with slight christmas feeling"
+  https://opengameart.org/content/happy-synths-loop-with-slight-christmas-feeling
+
+BGM/bgm_alt__every_xmas_merry_xmas.ogg
+  congusbongus — "Every Xmas Merry Xmas"
+  https://opengameart.org/content/every-xmas-merry-xmas
+
+SFX_Present/present_a__pleasing_bell.wav
+  Spring Spring — "Pleasing Bell Sound Effect"
+  https://opengameart.org/content/pleasing-bell-sound-effect
+
+SFX_Present/present_b__bell_ding1.wav
+SFX_Present/present_c__bell_ding2.wav
+SFX_Boost/boost_d__bell_ding3.wav
+  PWL — "Bell dings/chimes"
+  https://opengameart.org/content/bell-dingschimes
+
+SFX_Present/present_d__correct_bell.wav
+  Fupi — "Correct Bell"
+  https://opengameart.org/content/correct-bell
+
+All Kenney .ogg files (UI clicks, confirmation, maximize/minimize,
+error, pluck, glass, chop, metal pot, knife slice)
+  Kenney.nl — Interface Sounds + RPG Audio
+  https://kenney.nl/assets/interface-sounds
+  https://kenney.nl/assets/rpg-audio
+  https://opengameart.org/content/interface-sounds
+  https://opengameart.org/content/50-rpg-sound-effects

@@ -175,6 +175,12 @@ public class GameManager : MonoBehaviour
             PausedStateChanged.Invoke(true);
         }
 
+        // plays the pause sound
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlayPause();
+        }
+
         // displays a message in the console when the game is paused
         Debug.Log("Game Paused");
     }
@@ -190,6 +196,12 @@ public class GameManager : MonoBehaviour
         if (PausedStateChanged != null)
         {
             PausedStateChanged.Invoke(false);
+        }
+
+        // plays the resume sound
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlayResume();
         }
 
         // displays a message in the console when the game resumes

@@ -11,6 +11,12 @@ public class BoostHandler : MonoBehaviour
             // displays a message in the console when the player collects a boost token
             Debug.Log("Player collected a boost token!");
 
+            // plays the boost collection sound
+            if (AudioManager.Instance != null)
+            {
+                AudioManager.Instance.PlayBoost();
+            }
+
             // changes the game to the boosted state
             GameManager.Instance.ChangeState(GameManager.Instance.BoostedState);
 
