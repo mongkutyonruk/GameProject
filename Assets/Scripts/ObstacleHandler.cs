@@ -17,6 +17,12 @@ public class ObstacleHandler : MonoBehaviour
             // displays a message in the console when the player hits an obstacle
             Debug.Log("PLAYER HIT OBSTACLE!");
 
+            // plays the crash sound before the game over screen appears
+            if (AudioManager.Instance != null)
+            {
+                AudioManager.Instance.PlayCrash();
+            }
+
             // changes the game to the game over state after the player is hit
             GameManager.Instance.ChangeState(GameManager.Instance.GameOverState);
         }

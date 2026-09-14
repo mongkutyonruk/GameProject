@@ -86,6 +86,12 @@ public class BoostedState : BaseState
 
         if (boostTimer <= 0f)
         {
+            // plays the sound used when a boost runs out
+            if (AudioManager.Instance != null)
+            {
+                AudioManager.Instance.PlayBoostEnd();
+            }
+
             // returns the player to the normal driving state when the boost expires
             gameManager.ChangeState(gameManager.DrivingState);
         }

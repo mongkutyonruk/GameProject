@@ -45,6 +45,12 @@ public class PauseMenu : MonoBehaviour
     // restarts the current scene from the beginning
     public void Restart()
     {
+        // plays the button click sound
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlayClick();
+        }
+
         // makes sure the scene is not reloaded while time is still paused
         Time.timeScale = 1f;
         // reloads the currently active scene
@@ -54,6 +60,12 @@ public class PauseMenu : MonoBehaviour
     // returns the player to the main menu
     public void Quit()
     {
+        // plays the button click sound
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlayClick();
+        }
+
         // makes sure the main menu is not loaded while time is still paused
         Time.timeScale = 1f;
         // loads the main menu scene
